@@ -10,7 +10,9 @@ namespace caf = ClassicAspFormat;
 int main()
 {
   caf::Tokenizer tnz;
-  std::string content = caf::getFileContents("/home/mikael/Projects/files/classic-asp/index.asp");
+  std::string content = caf::getFileContents("/home/mikael/Projects/files/classic-asp/Orders.asp");
   std::vector<caf::Token> tokens = tnz.parse(content);
+
+  caf::debugPrint(tokens, caf::ASP_COMMENT, 20);
 }
 
