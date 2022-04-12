@@ -1,23 +1,16 @@
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <cerrno>
-#include "tokenizer.h"
+#include "tokenizer.hpp"
+
+namespace caf = ClassicAspFormat;
 
 int main()
 {
-
+  caf::Tokenizer tnz;
+  std::string content = caf::getFileContents("/home/mikael/Projects/files/classic-asp/index.asp");
+  std::vector<caf::Token> tokens = tnz.parse(content);
 }
 
-std::string getFileContents(const char *filename)
-{
-  std::ifstream in(filename, std::ios::in | std::ios::binary);
-  if (in)
-  {
-    std::ostringstream contents;
-    contents << in.rdbuf();
-    in.close();
-    return(contents.str());
-  }
-  throw(errno);
-}

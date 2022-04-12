@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/mikael/Projects/c++/ClassicAspFormat/build",
-  "command": "/usr/bin/g++   -I/home/mikael/Projects/c++/ClassicAspFormat/include  -g   -o CMakeFiles/caspfmt.dir/src/main.cpp.o -c /home/mikael/Projects/c++/ClassicAspFormat/src/main.cpp",
-  "file": "/home/mikael/Projects/c++/ClassicAspFormat/src/main.cpp"
-}
-]
