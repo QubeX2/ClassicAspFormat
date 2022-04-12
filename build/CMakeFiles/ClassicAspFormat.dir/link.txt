@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/ClassicAspFormat.dir/src/main.cpp.o  -o ClassicAspFormat 

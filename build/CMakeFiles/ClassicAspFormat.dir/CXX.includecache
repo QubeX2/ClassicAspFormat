@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mikael/Projects/c++/ClassicAspFormat/src/main.cpp
+fstream
+-
+sstream
+-
+string
+-
+cerrno
+-
+include/tokenizer.h
+/home/mikael/Projects/c++/ClassicAspFormat/src/include/tokenizer.h
+
