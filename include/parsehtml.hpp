@@ -11,7 +11,7 @@ namespace ClassicAspFormat {
     {
     public:
         std::vector<Token> parse(const std::string &content);
-        
+
     };
 
 }
