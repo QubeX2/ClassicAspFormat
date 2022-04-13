@@ -11,34 +11,37 @@
 #include <sstream>
 #include <cerrno>
 
+#include "parseasp.hpp"
+#include "parsejs.hpp"
+#include "parsehtml.hpp"
+#include "parsecss.hpp"
+
 namespace ClassicAspFormat {
 
-    enum TokenState 
+    enum ParserState 
     {
-        WHITESPACE, //                  0
-        LEFT_SIGN, // <                 1
-        RIGHT_SIGN, // >                2
-        ASP_START, // <%                3
-        ASP_COMMENT, // '               4
-        DISPLAY_EXP, // <%=             5
-        P_HTML_START_COMMENT, // <!     6
-        HTML_COMMENT, // <!--           7
-        P_HTML_END_COMMENT, // -->      8
-        HTML_COMMENT_TEXT, //           9
+        HTML,
+        CSS,
+        JAVSCRIPT,
+        ASP,
     };
 
     class Token 
     {
     public:
-        enum TokenState state {WHITESPACE};
-        std::string text;
+        enum ParserState state {HTML};
     };
     
     class Tokenizer 
     {
     public:
         std::vector<Token> parse(const std::string &content);
+
     private:
+        ParseAsp parseAsp;
+        ParseHtml parseHtml;
+        ParseJs parseJs;
+        ParseCss parseCss;
         void appendToken(Token &token, std::vector<Token> &tokens);
     };
 
