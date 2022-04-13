@@ -1,5 +1,6 @@
 //
-// Author: Mikael Andersson 
+// Author: Mikael Andersson
+// License: MIT
 //
 #include "tokenizer.hpp"
 

@@ -3,35 +3,15 @@
 // Author: Mikael Andersson
 // License: MIT
 //
-
-#include <iostream>
-#include <vector>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <cerrno>
-
-#include "parseasp.hpp"
-#include "parsejs.hpp"
+#include "types.hpp"
+#include "parse.hpp"
 #include "parsehtml.hpp"
 #include "parsecss.hpp"
+#include "parsejs.hpp"
+#include "parseasp.hpp"
 
 namespace ClassicAspFormat {
 
-    enum ParserState 
-    {
-        HTML,
-        CSS,
-        JAVSCRIPT,
-        ASP,
-    };
-
-    class Token 
-    {
-    public:
-        enum ParserState state {HTML};
-    };
-    
     class Tokenizer 
     {
     public:

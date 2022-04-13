@@ -1,14 +1,13 @@
 #pragma once
-
-#include "parse.hpp"
+//
+// Author: Mikael Andersson
+// License: MIT
+//
+#include "types.hpp"
 
 namespace ClassicAspFormat {
 
-    enum ParseStateHtml
-    {
-    };
-
-    class ParseHtml : Parse 
+    class ParseHtml : public Parse 
     {
     public:
         std::vector<Token> parse(const std::string &content);
